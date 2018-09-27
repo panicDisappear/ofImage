@@ -7,15 +7,16 @@ void ofApp::setup(){
      auto filename = name? name: "input.jpg";
 
      img.load(filename);
+     
  
      x = abs(img.getWidth() - ofGetWidth())/2;
      y = abs(img.getHeight() - ofGetHeight())/2;
 
-     /*
-       (A)
+     
 
        n =  3 * img.getWidth() * img.getHeight();
-     */
+     
+     cout << "Hello from setup" << endl;
 }
 
 
@@ -36,14 +37,16 @@ void ofApp::keyPressed(int key){
     if (key == 'i') 
           { 
  
-             /*  
-                (B)
-
-                for(int i = 0 ;i < n; i++)
+             
+                for(int i = 0 ;i < n/2; i++)
                  img.setColor(i, img.getColor(i).invert());
-             */ 
+            
            img.update();
+            cout << "A key has been pressed" << endl;
+           cout << "'i' has been pressed" << endl;
+          
            }//end if
+		
 }
 
 

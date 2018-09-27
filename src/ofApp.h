@@ -26,5 +26,5 @@ class ofApp : public ofBaseApp{
 
                  ofImage img;
                  int x, y;
- 
+  			int n;
     };
